@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 200px 0;
+    background-image: url('background.gif'); /* Replace with your GIF path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-position: center; /* Centers the image */
+    display: flex; /* Flexbox for the body */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text inside the elements */
+    color: white; /* Optional: Makes the text visible if the background is dark */
+    font-family: Arial, sans-serif; /* Optional: Clean font */
+}
+
+/* Christmas Themed Styling for h1 */
+h1 {
+    margin: 20px 0;
+    font-size: 3rem; /* Larger font size for Christmas */
+    color: #d32f2f; /* Christmas Red */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 15px #ffffff, 0 0 30px #ffffff; /* Glowing text effect */
+    font-family: 'Cinzel', serif; /* Elegant and festive font (optional) */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Christmas Themed Styling for h2 */
+h2 {
+    margin: 20px 0;
+    font-size: 2rem; /* Smaller than h1 but still bold */
+    color: #d32f2f; /* Christmas Green */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 10px #ffffff, 0 0 20px #ffffff; /* Glowing text effect */
+    font-family: 'Cinzel', serif; /* Matching festive font */
+    padding: 8px;
+    text-align: center;
+
+}
+
+.tennis-court {
+    position: relative;
+    margin: 80px auto;
+    background-image: url('tennis_court.jpeg'); /* Replace with your tennis court image */
+    background-size: contain; /* Ensure the image fits within the element */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+    background-position: center;
+    width: auto; /* Dynamically adjust width */
+    height: auto; /* Dynamically adjust height */
+    display: inline-block; /* Fit element tightly to the content */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+/* Grid for the calendar */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust depending on the number of days */
+    gap: 15px;
+}
+
+/* Common styles for calendar days */
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('ball_close.png') no-repeat center center; /* Tennis ball image */
+    background-size: 150%; /* Enlarges the image by 20% */
+    border-radius: 50%; /* Makes it a circle */
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Different sizes */
+.day.small {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+}
+
+.day.medium {
+    width: 100px;
+    height: 100px;
+    font-size: 1.2rem;
+}
+
+.day.large {
+    width: 120px;
+    height: 120px;
+    font-size: 1.5rem;
+}
+
+
+/* Style for when the case is clicked */
+.day.clicked {
+    transform: scale(1.05); /* Slight zoom effect */
+    background: url('raquette.png') no-repeat center center; /* Tennis ball image */
+    background-size: 90%; /* Enlarges the image by 20% */
+
+}
+
+/* Style for when the case is opened */
+.day.opened {
+    background: url('ball_open.png') no-repeat center center; /* Tennis ball image */
+    background-size: 120%; /* Enlarges the image by 20% */
+}
+
+/* Hover effect for general interaction */
+.day:hover {
+    transform: scale(1.2);
+}
+
+.qa-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #a89191;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.qa-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.qa-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.reward-bar-container {
+    position: relative;
+    width: 800px;
+    height: 20px;    /* Adjust height to fit your bar */
+    border-radius: 10px; /* Rounded corners for the container */
+    border: 2px solid red; /* Green border for the outline */
+}
+
+.reward-bar {
+    position: absolute;
+    width: 0%;
+    height: 20px;
+    background: #28732c; /* Green color for the reward bar */
+    border-radius: 10px;
+}
+
+.milestone-bar {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: red; /* Red color for the milestone bar */
+    border-radius: 5px;
+    top: -5px; /* Adjust so it sits on top of the reward bar */
+}
+
+.milestone-gift {
+    position: absolute;
+    top: 50px; /* Adjust so the gift is below the milestone bar */
+    transform: translateX(-50%); /* Centers the gift under the milestone */
+    z-index: 2;
+}
+
+.milestone-gift img {
+    width: 60px; /* Set the size of the gift */
+    height: 60px; /* Set the size of the gift */
+    opacity: 0.7; /* Initially set as semi-transparent (locked) */
+    transition: opacity 0.3s ease; /* Smooth transition when unlocked */
+}
+
+.milestone-gift.unlocked img {
+    opacity: 1; /* Fully visible when unlocked */
+}
+

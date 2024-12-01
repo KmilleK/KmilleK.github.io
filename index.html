@@ -1,1 +1,74 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier de l'avent de Catherine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+     <!--<button id="reset-button" class="reset-button">Reset</button>-->
+    <h1> Joyeux Noël Catherine !!</h1>
+
+    <div id="reward-bar-container" class="reward-bar-container">
+        <div id="reward-bar" class="reward-bar"></div>
+        <!-- Milestone markers as red bars -->
+        <div class="milestone-bar" style="left: 18%;"></div>
+        <div class="milestone-bar" style="left: 36%;"></div>
+        <div class="milestone-bar" style="left: 54%;"></div>
+        <div class="milestone-bar" style="left: 72%;"></div>
+        <div class="milestone-bar" style="left: 90%;"></div>
+
+        <!-- Images for gifts under each milestone -->
+        <div class="milestone-gift" style="left: 18%;"><img src="gift.png" alt="Gift 1" class="gift-image"></div>
+        <div class="milestone-gift" style="left: 36%;"><img src="gift.png" alt="Gift 2" class="gift-image"></div>
+        <div class="milestone-gift" style="left: 54%;"><img src="gift.png" alt="Gift 3" class="gift-image"></div>
+        <div class="milestone-gift" style="left: 72%;"><img src="gift.png" alt="Gift 4" class="gift-image"></div>
+        <div class="milestone-gift" style="left: 90%;"><img src="gift.png" alt="Gift 5" class="gift-image"></div>
+
+    </div>
+    <p id="milestone-feedback"></p>    
+    
+    <div class="tennis-court">
+        <div class="calendar-grid">
+            <div class="day medium" data-day="17">17</div>
+            <div class="day large" data-day="1">1</div>
+            <div class="day small" data-day="24">24</div>
+            <div class="day medium" data-day="12">12</div>
+            <div class="day large" data-day="7">7</div>
+            <div class="day small" data-day="19">19</div>
+            <div class="day medium" data-day="5">5</div>
+            <div class="day large" data-day="20">20</div>
+            <div class="day small" data-day="9">9</div>
+            <div class="day medium" data-day="13">13</div>
+            <div class="day large" data-day="3">3</div>
+            <div class="day small" data-day="22">22</div>
+            <div class="day medium" data-day="8">8</div>
+            <div class="day large" data-day="18">18</div>
+            <div class="day small" data-day="16">16</div>
+            <div class="day medium" data-day="2">2</div>
+            <div class="day large" data-day="21">21</div>
+            <div class="day small" data-day="10">10</div>
+            <div class="day medium" data-day="6">6</div>
+            <div class="day large" data-day="15">15</div>
+            <div class="day small" data-day="11">11</div>
+            <div class="day medium" data-day="23">23</div>
+            <div class="day large" data-day="4">4</div>
+            <div class="day small" data-day="14">14</div>
+        </div>
+        
+    </div>
+    <!-- Section pour afficher les questions et réponses -->
+    <div id="qa-section" class="qa-section">
+        <h2>Seras-tu la pro du tennis ? </h2>
+        <p id="question">Cliquez sur une case pour découvrir une question !</p>
+        <input id="user-answer" type="text" placeholder="Votre réponse ici" />
+        <button id="submit-answer">Valider</button>
+        <p id="feedback"></p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
